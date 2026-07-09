@@ -1,0 +1,17 @@
+# Firebase config (contains API keys)
+web/js/config.js
+
+# Environment / secrets
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
