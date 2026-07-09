@@ -1,0 +1,12 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.posse.kotlin1.calendar",
+    "sha256_cert_fingerprints": [
+      "9F:03:43:CB:41:82:64:A1:05:6B:D3:E9:05:0B:D9:52:91:37:9E:AD:31:CD:AA:9D:8C:1A:5B:EF:5B:8F:DA:D9",
+      "C3:8C:E7:A8:0A:DE:FF:C5:CD:B3:E9:EB:80:97:B9:EA:17:8E:7B:F9:23:5B:BF:CF:A4:DB:B8:9E:D5:E8:A4:A3",
+      "56:38:9D:13:17:41:6C:4D:9B:41:46:19:02:33:01:F0:3C:26:87:89:F8:65:93:E3:84:FE:AD:12:76:94:1E:8A"
+    ]
+  }
+}]
