@@ -160,4 +160,3 @@ auth.onAuthStateChanged(user => {
     }
 });
 
-initI18n();
