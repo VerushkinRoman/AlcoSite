@@ -1,7 +1,11 @@
-firebase.initializeApp(firebaseConfig);
-
-const auth = firebase.auth();
-const db = firebase.firestore();
+let auth, db;
+try {
+    firebase.initializeApp(firebaseConfig);
+    auth = firebase.auth();
+    db = firebase.firestore();
+} catch (e) {
+    console.warn('Firebase init failed:', e);
+}
 
 const screens = {
     login: document.getElementById('login-screen'),
@@ -152,11 +156,13 @@ modalConfirmBtn.addEventListener('click', async () => {
     }
 });
 
-auth.onAuthStateChanged(user => {
-    if (user) {
-        renderUser(user);
-    } else {
-        showScreen('login');
-    }
-});
+if (auth) {
+    auth.onAuthStateChanged(user => {
+        if (user) {
+            renderUser(user);
+        } else {
+            showScreen('login');
+        }
+    });
+}
 

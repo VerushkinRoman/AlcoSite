@@ -78,7 +78,11 @@
     <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
     <script src="js/config.js"></script>
     <script src="js/i18n.js"></script>
-    <script>initI18n();</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            initI18n();
+        });
+    </script>
     <script src="js/app.js"></script>
 </body>
 </html>
