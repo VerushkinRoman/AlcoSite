@@ -117,6 +117,20 @@ h1 {
     cursor: not-allowed;
 }
 
+.privacy-link {
+    display: block;
+    text-align: center;
+    margin-top: 16px;
+    color: var(--text-secondary);
+    font-size: 13px;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.privacy-link:hover {
+    color: var(--primary);
+}
+
 header {
     margin-bottom: 24px;
 }

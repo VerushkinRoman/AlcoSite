@@ -24,6 +24,7 @@ const i18n = {
         default_user: 'Пользователь',
         firestore_delete_warn: 'Ошибка при удалении данных Firestore:',
         email_mismatch: 'Email не совпадает',
+        privacy_link: 'Политика конфиденциальности',
     },
     en: {
         lang_name: 'English',
@@ -50,6 +51,7 @@ const i18n = {
         default_user: 'User',
         firestore_delete_warn: 'Error deleting Firestore data:',
         email_mismatch: 'Email does not match',
+        privacy_link: 'Privacy Policy',
     },
 };
 
