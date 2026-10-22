@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="app_name">Alco Calendar</title>
     <link rel="icon" type="image/svg+xml" href="img/logo.svg">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=20261022">
 </head>
 <body>
     <button id="lang-toggle" class="lang-toggle">EN</button>
@@ -18,6 +18,25 @@
                 </div>
                 <h1 data-i18n="app_name">Alco Calendar</h1>
                 <p class="subtitle" data-i18n="subtitle">Войдите, чтобы управлять своей учётной записью</p>
+
+                <form id="email-form" class="email-form" novalidate>
+                    <label class="email-label" for="email-input" data-i18n="email_label">Email</label>
+                    <input type="email" id="email-input" data-i18n-placeholder="email_placeholder" placeholder="email@example.com" autocomplete="email" required>
+                    <button type="submit" id="email-signin-btn" class="email-btn" data-i18n="signin_email">Войти по ссылке на email</button>
+                    <p id="email-error" class="error-text" hidden></p>
+                </form>
+
+                <div id="email-sent-box" class="email-sent-box" hidden>
+                    <p class="email-sent-title" data-i18n="email_sent_title">Проверьте почту</p>
+                    <p id="email-sent-text" class="email-sent-text"></p>
+                    <div class="email-sent-actions">
+                        <button id="email-resend-btn" class="btn-secondary" data-i18n="resend_email">Отправить ссылку ещё раз</button>
+                        <button id="email-change-btn" class="btn-link" data-i18n="change_email">Указать другой email</button>
+                    </div>
+                </div>
+
+                <div class="divider"><span data-i18n="divider_or">или</span></div>
+
                 <button id="google-signin-btn" class="google-btn">
                     <svg width="20" height="20" viewBox="0 0 48 48">
                         <path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/>
@@ -45,6 +64,7 @@
                         <div class="profile-info">
                             <h2 id="user-name"></h2>
                             <p id="user-email"></p>
+                            <p class="uid-row"><span class="uid-label" data-i18n="uid_label">UID</span><code id="user-uid"></code></p>
                         </div>
                     </div>
                 </div>
@@ -76,13 +96,14 @@
     <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-check-compat.js"></script>
     <script src="js/config.js"></script>
-    <script src="js/i18n.js"></script>
+    <script src="js/i18n.js?v=20261022"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             initI18n();
         });
     </script>
-    <script src="js/app.js"></script>
+    <script src="js/app.js?v=20261022"></script>
 </body>
 </html>

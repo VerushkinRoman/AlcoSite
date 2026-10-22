@@ -117,6 +117,152 @@ h1 {
     cursor: not-allowed;
 }
 
+.email-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.email-label {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.email-form input[type="email"] {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.email-form input[type="email"]:focus {
+    border-color: var(--primary);
+}
+
+.email-form input[type="email"]:disabled {
+    background: #f3f4f6;
+    color: var(--text-secondary);
+}
+
+.email-btn {
+    width: 100%;
+    padding: 12px 16px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.email-btn:hover:not(:disabled) {
+    background: var(--primary-hover);
+}
+
+.email-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    margin: 20px 0;
+    color: var(--text-secondary);
+    font-size: 13px;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+}
+
+.email-sent-box {
+    width: 100%;
+    margin-top: 20px;
+    padding: 16px;
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    text-align: left;
+}
+
+.card .email-sent-title {
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: var(--text);
+    font-size: 14px;
+}
+
+.card .email-sent-text {
+    margin-bottom: 12px;
+    color: var(--text-secondary);
+    font-size: 13px;
+    word-break: break-word;
+}
+
+.email-sent-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+}
+
+.btn-secondary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn-link {
+    padding: 4px 0;
+    border: none;
+    background: transparent;
+    color: var(--primary);
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.btn-link:hover {
+    text-decoration: underline;
+}
+
+.card .error-text {
+    color: var(--danger);
+    margin-top: 0;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.card .uid-row {
+    margin-top: 6px;
+    font-size: 12px;
+    color: var(--text-secondary);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.uid-row code {
+    font-size: 11px;
+    background: #f1f5f9;
+    padding: 4px 6px;
+    border-radius: 6px;
+    word-break: break-all;
+}
+
 .privacy-link {
     display: block;
     text-align: center;
